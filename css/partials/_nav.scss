@@ -1,0 +1,52 @@
+nav {
+  position: fixed;
+  min-height: 100vh;
+  text-transform: uppercase;
+  z-index: 100;
+  // mix-blend-mode: difference;
+}
+
+nav ul {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 2;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @include media("screen", ">=tablet") {
+    margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+}
+
+nav li {
+  cursor: pointer;
+  opacity: .25;
+  transition: opacity .3s ease;
+}
+
+nav .middle {
+  opacity: 1;
+}
+
+.logo {
+  // background-image: url("../img/nike/black.svg");
+  // background-repeat: no-repeat;
+  // background-position: 0;
+  // background-size: contain;
+  position: absolute;
+  top: 1.5rem;
+  right: .5rem;
+  height: 27px;
+  width: 75px;
+  z-index: 100;
+
+  @include media("screen", ">=tablet") {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}

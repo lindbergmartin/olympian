@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 85vw;
+  margin-left: calc(15vw / 2);
+  outline: 1px solid black;
+  background: #d50a1d;
+  opacity: .00;
+  z-index: 100;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.font-sans-tk {
+  font-family: aktiv-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.font-display {
+  font-family: titling-gothic-fb-extended, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section, footer, .spacer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+section, footer {
+  min-height: 100vh;
+}
+
+.spacer {
+  min-height: 30vh;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .5rem;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  position: fixed;
+  min-height: 100vh;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+nav ul {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 2;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    margin-left: 2.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+}
+
+nav li {
+  cursor: pointer;
+  opacity: .25;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+nav .middle {
+  opacity: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  right: .5rem;
+  height: 27px;
+  width: 75px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+}
+
+#hero {
+  padding-top: 0;
+}
+
+#hero * {
+  position: absolute;
+}
+
+#hero img {
+  width: 90%;
+  z-index: 30;
+}
+
+#hero img:nth-of-type(1) {
+  z-index: 50 !important;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.name:nth-of-type(1) {
+  margin-top: -1.33333rem;
+  z-index: 20;
+}
+
+.name:nth-of-type(2) {
+  margin-bottom: -1.33333rem;
+  z-index: 40;
+}
+
+#circle {
+  height: 12rem;
+  width: 12rem;
+  background: #d50a1d;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+#bio {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-left: 4rem;
+}
+
+#bio img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+  z-index: -100;
+  max-height: 95%;
+  width: auto;
+}
+
+#bio .card {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+#bio .card:nth-of-type(1) {
+  text-align: right;
+}
+
+#stats {
+  color: green;
+}
+
+#honors {
+  color: green;
+}
+
+#shop {
+  color: green;
+}
+
+footer {
+  position: relative;
+}
+
+footer .logo {
+  top: initial;
+  bottom: 1.5rem;
+}
+
+.rellax-container {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */
