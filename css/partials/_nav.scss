@@ -3,7 +3,6 @@ nav {
   min-height: 100vh;
   text-transform: uppercase;
   z-index: 100;
-  // mix-blend-mode: difference;
 }
 
 nav ul {
@@ -27,6 +26,7 @@ nav li {
   cursor: pointer;
   opacity: .25;
   transition: opacity .3s ease;
+  mix-blend-mode: difference;
 }
 
 nav .middle {

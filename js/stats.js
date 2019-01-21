@@ -18,10 +18,10 @@ $(document).ready(function(){
 
   tlStats.add({
     targets: stats,
-    games: 130,
-    minutes: 50,
-    goals: 70,
-    assists: 30,
+    games: 279,
+    minutes: 783,
+    goals: 95,
+    assists: 47,
     round: 1,
     duration: 2000,
     delay: anime.stagger(500),
@@ -42,7 +42,7 @@ $(document).ready(function(){
     reverse: false
   })
   .setAnime(tlStats)
-  .addIndicators({name: 'stats', colorEnd: 'pink'})
+  // .addIndicators({name: 'stats', colorEnd: 'pink'})
   .addTo(controller);
 
 });

@@ -14,6 +14,31 @@
   width: auto;
 }
 
+.intro {
+  text-align: right;
+  width: 100%;
+}
+
+.intro h2 {
+  @extend .font-display;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+  // color: $blue;
+}
+
+span.highlight {
+  color: $yellow;
+}
+
+.position, .number, .number_9 {
+  @extend .font-condensed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $grey;
+}
+
 #bio .card {
   padding: 2rem 0;
   width: 100%;

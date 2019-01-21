@@ -1,3 +1,47 @@
-#stats {
-  color: green;
+// .stat {
+//   position: relative;
+//   height: 100px;
+//   width: 100%;
+// }
+
+// .stat_num, .stat_label {
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+// }
+
+.stat_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  // margin: .25rem 0;
+}
+
+.stat_num {
+  @extend .font-display;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: right;
+  color: $yellow;
+}
+
+.stat_label {
+  @extend .font-condensed;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  writing-mode: sideways-lr;
+  margin-bottom: 5px;
+  color: $blue;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
