@@ -1,3 +1,42 @@
 #shop {
-  color: green;
+  flex-direction: column;
+  @extend .font-condensed;
+}
+
+.product-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .5px;
+  padding-bottom: 5rem;
+}
+
+.product-card span {
+  margin-bottom: .5rem;
+}
+
+.product {
+  font-weight: 400;
+
+}
+
+.price {
+  color: $grey;
+}
+
+.buy {
+  padding: .5rem;
+  border: 1px solid $blue;
+  width: 100px;
+  color: $blue;
+  background: white;
+  transition: all .4s ease;
+}
+
+.buy:hover {
+  color: white;
+  background: $blue;
 }

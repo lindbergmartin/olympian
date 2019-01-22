@@ -1,3 +1,70 @@
 #honors {
-  color: green;
+  flex-direction: column;
+  padding-left: 4rem;
+  text-align: right;
+}
+
+.honors-card {
+  // padding: 1rem 0;
+  margin: 2rem 0;
+  padding-right: 1rem;
+  position: relative;
+  right: -1rem;
+  width: 100%;
+}
+
+#honors h2 {
+  @extend .font-display;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.honors-card h3 {
+  text-transform: uppercase;
+  font-size: .85rem;
+  font-weight: 700;
+  color: $grey;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+
+.honors-card h4 {
+  @extend .font-condensed;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+
+.honors-card span {
+  display: block;
+  font-size: .85rem;
+}
+
+.honors-card-section {
+  margin-bottom: 1.2rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+#honors_individual {
+  border-right: 4px solid $yellow;
+}
+
+#honors_national-team {
+  border-right: 4px solid $blue;
+}
+
+#honors_japanese-club {
+  border-right: 4px solid $red;
+}
+
+#honors_club-team {
+  border-right: 4px solid $grey;
 }

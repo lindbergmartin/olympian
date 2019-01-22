@@ -83,11 +83,11 @@ img {
   font-family: aktiv-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.font-display, .intro h2, .stat_num {
+.font-display, .bio-card h3, .intro h2, .stat_num, #honors h2 {
   font-family: titling-gothic-fb-extended, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.font-condensed, .position, .number, .number_9, .stat_label {
+.font-condensed, .position, .number, .number_9, .stat_label, .honors-card h4, #shop, .footer-card h4 {
   font-family: titling-gothic-fb-compressed, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -101,7 +101,7 @@ section, footer, .spacer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 15vh 2rem;
 }
 
 section, footer {
@@ -109,12 +109,23 @@ section, footer {
 }
 
 .spacer {
-  min-height: 30vh;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .5rem;
   font-weight: 700;
   background: #f2f6ff;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: .85rem;
+  line-height: 1.2;
 }
 
 nav {
@@ -173,6 +184,7 @@ nav .middle {
 
 #hero {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 #hero * {
@@ -229,11 +241,60 @@ nav .middle {
   z-index: -100;
   max-height: 95%;
   width: auto;
+  display: none;
+}
+
+.bio-card {
+  padding: 2rem 0;
+  margin: 2rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bio-card h3 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+  padding-right: 1rem;
+  position: relative;
+  right: -1rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.bio-card:nth-of-type(1) h3 {
+  border-right: 4px solid #fbbe00;
+}
+
+.bio-card:nth-of-type(2) h3 {
+  border-right: 4px solid #001c51;
+}
+
+.bio-card:nth-of-type(3) h3 {
+  border-right: 4px solid #d50a1d;
+}
+
+#stats {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .intro {
   text-align: right;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .intro h2 {
@@ -251,15 +312,6 @@ span.highlight {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #cdd1d8;
-}
-
-#bio .card {
-  padding: 2rem 0;
-  width: 100%;
-}
-
-#bio .card:nth-of-type(1) {
-  text-align: right;
 }
 
 .stat_wrap {
@@ -302,22 +354,163 @@ span.highlight {
       -ms-writing-mode: sideways-lr;
           writing-mode: sideways-lr;
   margin-bottom: 5px;
-  color: #001c51;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
 #honors {
-  color: green;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 4rem;
+  text-align: right;
+}
+
+.honors-card {
+  margin: 2rem 0;
+  padding-right: 1rem;
+  position: relative;
+  right: -1rem;
+  width: 100%;
+}
+
+#honors h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.honors-card h3 {
+  text-transform: uppercase;
+  font-size: .85rem;
+  font-weight: 700;
+  color: #cdd1d8;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+
+.honors-card h4 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+
+.honors-card span {
+  display: block;
+  font-size: .85rem;
+}
+
+.honors-card-section {
+  margin-bottom: 1.2rem;
+}
+
+.honors-card-section:last-of-type {
+  margin-bottom: 0;
+}
+
+#honors_individual {
+  border-right: 4px solid #fbbe00;
+}
+
+#honors_national-team {
+  border-right: 4px solid #001c51;
+}
+
+#honors_japanese-club {
+  border-right: 4px solid #d50a1d;
+}
+
+#honors_club-team {
+  border-right: 4px solid #cdd1d8;
 }
 
 #shop {
-  color: green;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-card {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .5px;
+  padding-bottom: 5rem;
+}
+
+.product-card span {
+  margin-bottom: .5rem;
+}
+
+.product {
+  font-weight: 400;
+}
+
+.price {
+  color: #cdd1d8;
+}
+
+.buy {
+  padding: .5rem;
+  border: 1px solid #001c51;
+  width: 100px;
+  color: #001c51;
+  background: white;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.buy:hover {
+  color: white;
+  background: #001c51;
 }
 
 footer {
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.footer-card {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.footer-card:last-of-type {
+  margin-bottom: 10vh;
+}
+
+.footer-card h4 {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .25rem;
+}
+
+.footer-card a {
+  font-size: .75rem;
+  color: #2d3a51;
+  line-height: 1.2;
 }
 
 footer .logo {

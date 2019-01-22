@@ -1,5 +1,6 @@
 #hero {
   padding-top: 0;
+  padding-bottom: 0;
 }
 #hero * {
   position: absolute;
@@ -19,6 +20,7 @@ $name-size: 2rem;
 .name {
   font-size: $name-size;
   font-weight: 900;
+  // text-transform: uppercase;
 }
 
 .name:nth-of-type(1) {

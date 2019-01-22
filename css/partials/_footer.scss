@@ -1,6 +1,31 @@
 footer {
   position: relative;
+  flex-direction: column;
+  text-align: right;
 }
+
+.footer-card {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.footer-card:last-of-type {
+  margin-bottom: 10vh;
+}
+
+.footer-card h4 {
+  @extend .font-condensed;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: .25rem;
+}
+
+.footer-card a {
+  font-size: .75rem;
+  color: $grey-dark;
+  line-height: 1.2;
+}
+
 footer .logo {
   top: initial;
   bottom: 1.5rem;

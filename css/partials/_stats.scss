@@ -1,14 +1,32 @@
-// .stat {
-//   position: relative;
-//   height: 100px;
-//   width: 100%;
-// }
+#stats {
+  flex-direction: column;
+}
 
-// .stat_num, .stat_label {
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-// }
+.intro {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.intro h2 {
+  @extend .font-display;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+  // color: $blue;
+}
+
+span.highlight {
+  color: $yellow;
+}
+
+.position, .number, .number_9 {
+  @extend .font-condensed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $grey;
+}
 
 .stat_wrap {
   display: flex;
@@ -39,7 +57,7 @@
   letter-spacing: .5px;
   writing-mode: sideways-lr;
   margin-bottom: 5px;
-  color: $blue;
+  // color: $blue;
 
   position: absolute;
   bottom: 0;
