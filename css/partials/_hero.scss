@@ -6,9 +6,13 @@
   position: absolute;
 }
 
-#hero img {
+#hero .hero-img {
   width: 90%;
   z-index: 30;
+  @include media(">=500px") {
+    width: auto;
+    max-height: 80%;
+  }
 }
 
 #hero img:nth-of-type(1) {
@@ -21,16 +25,52 @@ $name-size: 2rem;
   font-size: $name-size;
   font-weight: 900;
   // text-transform: uppercase;
+  @include media(">=400px") {
+    font-size: 2.4rem;
+  }
+  @include media(">=500px") {
+    font-size: 3rem;
+  }
+  @include media(">=768px") {
+    font-size: 4.5rem;
+  }
+  @include media(">=1000px") {
+    font-size: 6rem;
+  }
 }
 
 .name:nth-of-type(1) {
   margin-top: -$name-size/1.5;
   z-index: 20;
+  @include media(">=400px") {
+    margin-top: -1.5rem;
+  }
+  @include media(">=500px") {
+    margin-top: -2rem;
+  }
+  @include media(">=768px") {
+    margin-top: -3rem;
+  }
+  @include media(">=1000px") {
+    margin-top: -3.75rem;
+  }
 }
 
 .name:nth-of-type(2) {
   margin-bottom: -$name-size/1.5;
   z-index: 40;
+  @include media(">=400px") {
+    margin-bottom: -1.5rem;
+  }
+  @include media(">=500px") {
+    margin-bottom: -2rem;
+  }
+  @include media(">=768px") {
+    margin-bottom: -3rem;
+  }
+  @include media(">=1000px") {
+    margin-bottom: -3.75rem;
+  }
 }
 
 #circle {
@@ -39,4 +79,20 @@ $name-size: 2rem;
   background: $red;
   border-radius: 50%;
   z-index: 10;
+  @include media(">=400px") {
+    height: 14rem;
+    width: 14rem;
+  }
+  @include media(">=500px") {
+    height: 16rem;
+    width: 16rem;
+  }
+  @include media(">=768px") {
+    height: 18rem;
+    width: 18rem;
+  }
+  @include media(">=1000px") {
+    height: 24rem;
+    width: 24rem;
+  }
 }

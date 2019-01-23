@@ -29,4 +29,9 @@ footer {
 footer .logo {
   top: initial;
   bottom: 1.5rem;
+
+  @include media("screen", ">=tablet") {
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
 }

@@ -2,6 +2,10 @@
   flex-direction: column;
   position: relative;
   padding-left: 4rem;
+
+  @include media(">=500px") {
+    padding-left: 2rem;
+  }
 }
 
 #bio img {
@@ -17,7 +21,7 @@
 
 .bio-card {
   padding: 2rem 0;
-  margin: 2rem 0;
+  margin: 6rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,23 +33,85 @@
   font-size: 1.2rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: .15rem;
   padding-right: 1rem;
   position: relative;
   right: -1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: right;
-  // width: 80%;
+  @include media(">=600px") {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .bio-card:nth-of-type(1) h3 {
   border-right: 4px solid $yellow;
 }
 
-.bio-card:nth-of-type(2) h3 {
+.bio-card:nth-of-type(3) h3 {
   border-right: 4px solid $blue;
 }
 
-.bio-card:nth-of-type(3) h3 {
+.bio-card:last-of-type h3 {
   border-right: 4px solid $red;
 }
+
+.bio-break {
+  width: 100vw;
+  margin: 0;
+  margin-left: -2rem;
+  padding: 2rem;
+  @include media(">500px") {
+    margin-left: 0;
+  }
+}
+
+.bio-quote {
+  background: $yellow;
+  color: $blue;
+  text-align: right;
+  @extend .font-display;
+  font-weight: 700;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bio-quote blockquote {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.open-quote, .close-quote {
+  position: relative;
+}
+
+.close-quote {
+  margin-right: -1.3rem;
+}
+
+.bio-quote .position, .bio-quote .number, .bio-quote .team {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  opacity: .5;
+  @extend .font-condensed;
+  font-weight: 400;
+}
+
+.bio-quote .attr {
+  text-transform: uppercase;
+  display: block;
+  mix-blend-mode: overlay;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.bio-tsubasa {
+  background: url("../img/tsubasa.jpg");
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+

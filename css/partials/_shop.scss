@@ -1,6 +1,24 @@
 #shop {
   flex-direction: column;
   @extend .font-condensed;
+  @include media(">=600px") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  @include media(">=1000px") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10rem;
+  }
+  @include media(">=1000px") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25vw;
+  }
 }
 
 .product-card {
@@ -12,6 +30,9 @@
   text-align: center;
   letter-spacing: .5px;
   padding-bottom: 5rem;
+  @include media(">=600px") {
+    width: 45%;
+  }
 }
 
 .product-card span {

@@ -62,18 +62,6 @@ html {
           box-sizing: inherit;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 85vw;
-  margin-left: calc(15vw / 2);
-  outline: 1px solid black;
-  background: #d50a1d;
-  opacity: .00;
-  z-index: 100;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -83,11 +71,11 @@ img {
   font-family: aktiv-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.font-display, .bio-card h3, .intro h2, .stat_num, #honors h2 {
+.font-display, .bio-card h3, .bio-quote, .intro h2, .stat_num, #honors h2 {
   font-family: titling-gothic-fb-extended, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.font-condensed, .position, .number, .number_9, .stat_label, .honors-card h4, #shop, .footer-card h4 {
+.font-condensed, .bio-quote .position, .bio-quote .number, .bio-quote .team, .position, .number, .number_9, .stat_label, .honors-card h4, #shop, .footer-card h4 {
   font-family: titling-gothic-fb-compressed, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -101,7 +89,7 @@ section, footer, .spacer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15vh 2rem;
+  padding: 0 2rem;
 }
 
 section, footer {
@@ -109,6 +97,7 @@ section, footer {
 }
 
 .spacer {
+  min-height: 30vh;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .5rem;
@@ -123,9 +112,17 @@ a {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin: .6rem 0;
   font-size: .85rem;
   line-height: 1.2;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+em {
+  font-style: italic;
 }
 
 nav {
@@ -169,7 +166,7 @@ nav .middle {
 .logo {
   position: absolute;
   top: 1.5rem;
-  right: .5rem;
+  right: 1rem;
   height: 27px;
   width: 75px;
   z-index: 100;
@@ -191,9 +188,16 @@ nav .middle {
   position: absolute;
 }
 
-#hero img {
+#hero .hero-img {
   width: 90%;
   z-index: 30;
+}
+
+@media (min-width: 500px) {
+  #hero .hero-img {
+    width: auto;
+    max-height: 80%;
+  }
 }
 
 #hero img:nth-of-type(1) {
@@ -205,14 +209,86 @@ nav .middle {
   font-weight: 900;
 }
 
+@media (min-width: 400px) {
+  .name {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .name {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .name {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .name {
+    font-size: 6rem;
+  }
+}
+
 .name:nth-of-type(1) {
   margin-top: -1.33333rem;
   z-index: 20;
 }
 
+@media (min-width: 400px) {
+  .name:nth-of-type(1) {
+    margin-top: -1.5rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .name:nth-of-type(1) {
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .name:nth-of-type(1) {
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .name:nth-of-type(1) {
+    margin-top: -3.75rem;
+  }
+}
+
 .name:nth-of-type(2) {
   margin-bottom: -1.33333rem;
   z-index: 40;
+}
+
+@media (min-width: 400px) {
+  .name:nth-of-type(2) {
+    margin-bottom: -1.5rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .name:nth-of-type(2) {
+    margin-bottom: -2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .name:nth-of-type(2) {
+    margin-bottom: -3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .name:nth-of-type(2) {
+    margin-bottom: -3.75rem;
+  }
 }
 
 #circle {
@@ -223,6 +299,34 @@ nav .middle {
   z-index: 10;
 }
 
+@media (min-width: 400px) {
+  #circle {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
+@media (min-width: 500px) {
+  #circle {
+    height: 16rem;
+    width: 16rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #circle {
+    height: 18rem;
+    width: 18rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #circle {
+    height: 24rem;
+    width: 24rem;
+  }
+}
+
 #bio {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -230,6 +334,12 @@ nav .middle {
           flex-direction: column;
   position: relative;
   padding-left: 4rem;
+}
+
+@media (min-width: 500px) {
+  #bio {
+    padding-left: 2rem;
+  }
 }
 
 #bio img {
@@ -246,7 +356,7 @@ nav .middle {
 
 .bio-card {
   padding: 2rem 0;
-  margin: 2rem 0;
+  margin: 6rem 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,24 +374,130 @@ nav .middle {
   font-size: 1.2rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: .15rem;
   padding-right: 1rem;
   position: relative;
   right: -1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: right;
+}
+
+@media (min-width: 600px) {
+  .bio-card h3 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .bio-card:nth-of-type(1) h3 {
   border-right: 4px solid #fbbe00;
 }
 
-.bio-card:nth-of-type(2) h3 {
+.bio-card:nth-of-type(3) h3 {
   border-right: 4px solid #001c51;
 }
 
-.bio-card:nth-of-type(3) h3 {
+.bio-card:last-of-type h3 {
   border-right: 4px solid #d50a1d;
+}
+
+.bio-break {
+  width: 100vw;
+  margin: 0;
+  margin-left: -2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 501px) {
+  .bio-break {
+    margin-left: 0;
+  }
+}
+
+.bio-quote {
+  background: #fbbe00;
+  color: #001c51;
+  text-align: right;
+  font-weight: 700;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bio-quote blockquote {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.open-quote, .close-quote {
+  position: relative;
+}
+
+.close-quote {
+  margin-right: -1.3rem;
+}
+
+.bio-quote .position, .bio-quote .number, .bio-quote .team {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  opacity: .5;
+  font-weight: 400;
+}
+
+.bio-quote .attr {
+  text-transform: uppercase;
+  display: block;
+  mix-blend-mode: overlay;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.bio-tsubasa {
+  background: url("../img/tsubasa.jpg");
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#goal-video {
+  overflow: hidden;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#goal-video span {
+  color: #fbbe00;
+  font-size: 15rem;
+  text-transform: uppercase;
+  font-family: titling-gothic-fb-extended, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  mix-blend-mode: hard-light;
+}
+
+#goal-video span:nth-child(odd) {
+  color: transparent;
+  -webkit-text-stroke: 1px #fbbe00;
+}
+
+#video-background {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 #stats {
@@ -364,6 +580,8 @@ span.highlight {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   padding-left: 4rem;
   text-align: right;
 }
@@ -438,6 +656,51 @@ span.highlight {
           flex-direction: column;
 }
 
+@media (min-width: 600px) {
+  #shop {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #shop {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #shop {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 25vw;
+  }
+}
+
 .product-card {
   width: 90%;
   display: -webkit-box;
@@ -454,6 +717,12 @@ span.highlight {
   text-align: center;
   letter-spacing: .5px;
   padding-bottom: 5rem;
+}
+
+@media (min-width: 600px) {
+  .product-card {
+    width: 45%;
+  }
 }
 
 .product-card span {
@@ -516,6 +785,13 @@ footer {
 footer .logo {
   top: initial;
   bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  footer .logo {
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
 }
 
 .rellax-container {

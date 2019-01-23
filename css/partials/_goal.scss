@@ -1,0 +1,34 @@
+#goal-video {
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#goal-video span {
+  color: $yellow;
+  font-size: 15rem;
+  text-transform: uppercase;
+  font-family: titling-gothic-fb-extended, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  mix-blend-mode: hard-light;
+}
+
+#goal-video span:nth-child(odd) {
+  color: transparent;
+  -webkit-text-stroke: 1px $yellow;
+}
+
+#video-background {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+
+  right: 50%;
+  transform: translateX(50%);
+}
