@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   var statsScene = new ScrollMagic.Scene({
     triggerElement: '#stats',
-    triggerHook: 'onCenter',
+    triggerHook: .2,
     reverse: false
   })
   .setAnime(tlStats)
