@@ -49,6 +49,52 @@ section, footer {
   background: $grey-light;
 }
 
+.break-quote {
+  background: #fbbe00;
+  color: #001c51;
+  text-align: right;
+  font-weight: 700;
+  padding: 4rem;
+  padding-right: 2rem;
+
+  @extend .font-display;
+
+  blockquote {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .attr {
+    text-transform: uppercase;
+    display: block;
+    mix-blend-mode: overlay;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+  .attr-descriptor {
+    @extend .font-condensed;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    opacity: .5;
+    font-weight: 400;
+  }
+  .close-quote {
+    margin-right: -1.2rem;
+  }
+
+  &.bio-quote-blue .attr {
+    color: white;
+    mix-blend-mode: screen;
+    opacity: .5;
+  }
+
+  &.bio-quote-blue .attr-descriptor {
+    opacity: .25;
+  }
+}
+
 a {
   text-decoration: none;
   margin: 0;
@@ -67,4 +113,12 @@ p:last-of-type {
 
 em {
   font-style: italic;
+}
+
+.hidden-mobile {
+  display: none !important;
+
+  @include media(">500px") {
+    display: initial;
+  }
 }

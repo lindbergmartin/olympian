@@ -21,11 +21,16 @@ span.highlight {
   color: $yellow;
 }
 
-.position, .number, .number_9 {
+.position, .number, .number_9, .height, .weight {
   @extend .font-condensed;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $grey;
+  margin-right: .2rem;
+}
+
+.weight {
+  margin-right: 0;
 }
 
 .stat_wrap {
