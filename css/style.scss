@@ -3,10 +3,11 @@
 @import "partials/variables";
 @import "partials/include-media";
 @import "partials/global";
+@import "partials/utilities";
 
 // Partials
 @import "partials/nav";
-@import "partials/hero";
+@import "partials/hero-grid";
 @import "partials/bio";
 @import "partials/goal";
 @import "partials/stats";

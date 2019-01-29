@@ -2,6 +2,10 @@ footer {
   position: relative;
   flex-direction: column;
   text-align: right;
+
+  @include media(">500px") {
+    padding: 6rem 2rem;
+  }
 }
 
 .footer-card {

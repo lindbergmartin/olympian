@@ -44,50 +44,49 @@
   <script src="js/sm/debug.addIndicators.min.js"></script>
   <script src="js/anime/animation.anime.min.js"></script>
 
-  <!-- erics scripts -->
-  <!-- <script src="js/rellax.min.js"></script> -->
 </head>
 
-<body class="font-sans">
+<body class="font-sans clip">
   <nav class="">
     <ul class="navbar"></ul>
   </nav>
 
+  <a href="#" class="logo"><img src="img/nike/black.svg"></a>
+
   <section id="hero">
-    <a href="#" class="logo"><img src="img/nike/black.svg"></a>
-    <span class="name font-display">Nahomi</span>
-    <img class="hero-img" src="img/kick-arm.png" alt="">
-    <img class="hero-img" src="img/kick.png" alt="">
-    <div class="" id="circle"></div>
-    <span class="name font-display">Kawasumi</span>
+    <div class="clip z-20"><span class="name name-first font-display">Nahomi</span></div>
+    <div class="clip z-40"><span class="name name-second font-display">Kawasumi</span></div>
+    <div class="clip z-50"><img class="hero-img" src="img/kick-arm.png" alt=""></div>
+    <div class="clip z-30"><img class="hero-img" src="img/kick.png" alt=""></div>
+    <div class="z-10" id="circle"></div>
   </section>
 
   <section id="bio" data-name="bio">
-    <div class="bio-quote bio-quote-yellow no-attr">
+    <div class="bio-quote bio-quote-yellow no-attr" id="driven">
       <blockquote>
         “I have a strong drive to not want to&nbsp;lose&nbsp;to anyone<span class="hidden-mobile">, no matter if they are older or bigger than me. I’ve come this far thinking, ‘I am not going to lose</span>.<span class="hidden-mobile">’</span><span class="close-quote">”</span>
       </blockquote>
       <blockquote class="stroked-yellow mask-determined">
         “I have a strong drive to not want to&nbsp;lose&nbsp;to anyone<span class="hidden-mobile">, no matter if they are older or bigger than me. I’ve come this far thinking, ‘I am not going to lose</span>.<span class="hidden-mobile">’</span><span class="close-quote">”</span>
       </blockquote>
-      <img src="img/determined.png" class="bio-quote-image" alt="">
+      <img src="img/determined2.png" class="bio-quote-image" id="driven-img" alt="">
     </div>
-    <div class="bio-card">
-      <h3>A determined athlete</h3>
+    <div class="bio-card" id="tenacity">
+      <h3>Tenacity</h3>
       <p>Nahomi has known since second grade that she wanted to be a soccer player. Growing up, she taught herself the skills to compete at a level of girls twice her age.</p>
       <p>It is this competitive edge and stubbornness that has continued to bring her successes, even though she has never been the quickest or most powerful player.</p>
     </div>
-    <div class="bio-quote bio-quote-blue no-attr">
+    <div class="bio-quote bio-quote-blue no-attr" id="creative">
       <blockquote>
         “You cannot win by only using players who are fast, big, and strong. You need to be creative.<span class="close-quote">”</span>
       </blockquote>
       <blockquote class="stroked-yellow mask-creative">
         “You cannot win by only using players who are fast, big, and strong. You need to be creative.<span class="close-quote">”</span>
       </blockquote>
-      <img src="img/creative.png" class="bio-quote-image" alt="">
+      <img src="img/creative3.png" class="bio-quote-image" id="creative-img" alt="">
     </div>
     <div class="bio-card">
-      <h3>An international veteran</h3>
+      <h3>Experience</h3>
       <p>Focusing on fundamentals and strategic thinking has made Nahomi an exceptionally successful team player allowing her to have had a career full of rich experiences.</p>
       <p>Nahomi won the World Cup with the Japan national team and received a silver medal in the Olympics. She had a long career in the Japanese women’s league with INAC Kobe Leonessa before coming to the Seattle Reign FC and solidifying herself as one of the NWSL’s best players.</p>
     </div>
@@ -105,9 +104,9 @@
   <section id="stats" data-name="stats">
     <div class="intro">
       <h2><span class="highlight">Naho</span>mi <br> Kawasumi</h2>
-      <span class="position">Foward</span>
-      <span class="number">No.</span><span class="number_9">9</span>
-      <span class="height">5’</span><span class="height">2”</span><span class="weight">110lbs</span>
+      <span class="font-stat position">Foward</span>
+      <span class="font-stat number">No.</span><span class="font-stat number_9">9</span>
+      <span class="font-stat height">5’</span><span class="font-stat height">2”</span><span class="font-stat weight">110lbs</span>
     </div>
     <div class="stat_wrap">
       <div class="stat">
@@ -299,10 +298,11 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/quotes.js"></script>
   <script src="js/stats.js"></script>
   <script src="js/goal/goalSpans.js"></script>
   <script src="js/goal/tlGoal.js"></script>
-  <!-- <script>var rellax = new Rellax('.rellax');</script> -->
 </body>
 
 </html>

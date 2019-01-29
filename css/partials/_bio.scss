@@ -1,10 +1,15 @@
 #bio {
-  flex-direction: column;
-  position: relative;
-  padding-left: 4rem;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  @include media(">=500px") {
-    padding-left: 2rem;
+  @include media(">500px") {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @include media(">1000px") {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
 }
 
@@ -18,6 +23,8 @@
 
   @include media(">500px") {
     margin-left: 0;
+    width: 100%;
+    height: 100vh;
   }
 }
 
@@ -28,15 +35,19 @@
   align-items: center;
   padding-left: 4rem;
   padding-right: 2rem;
+  @include media(">500px") {
+    padding-right: 4rem;
+  }
 }
 
 .bio-card h3 {
   @extend .font-display;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   margin-bottom: 1rem;
-  // text-align: right;
+  text-align: left;
+  width: 100%;
 }
 
 .bio-quote {
@@ -50,6 +61,17 @@
   @extend .font-display;
   font-weight: 700;
   text-align: right;
+
+  @include media(">500px") {
+    padding-right: 4rem;
+  }
+}
+
+#creative {
+  order: 2;
+  @include media(">1000px") {
+    order: initial;
+  }
 }
 
 .bio-quote blockquote {

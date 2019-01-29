@@ -1,11 +1,15 @@
 #stats {
-  flex-direction: column;
+  @include media(">500px") {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 .intro {
   text-align: right;
   width: 100%;
   margin-bottom: 4rem;
+  align-self: end;
 }
 
 .intro h2 {
@@ -21,19 +25,12 @@ span.highlight {
   color: $yellow;
 }
 
-.position, .number, .number_9, .height, .weight {
-  @extend .font-condensed;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: $grey;
-  margin-right: .2rem;
-}
-
 .weight {
   margin-right: 0;
 }
 
 .stat_wrap {
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
