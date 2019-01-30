@@ -8,7 +8,7 @@ footer {
   width: 100%;
   align-self: start;
 
-  @include media(">=1280px") {
+  @include media(">=1200px") {
     display: flex;
     text-align: left;
     max-width: 50%;
@@ -20,7 +20,7 @@ footer {
 .footer-card {
   width: 100%;
   margin: 2rem 0;
-  @include media(">=1280px") {
+  @include media(">=1200px") {
     margin-top: 0;
     width: auto;
   }
@@ -30,7 +30,7 @@ footer {
   @include media(">=tablet") {
     margin-top: 2.75rem;
   }
-  @include media(">=1280px") {
+  @include media(">=1200px") {
     margin-top: 0;
   }
 }

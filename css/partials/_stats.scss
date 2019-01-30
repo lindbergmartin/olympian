@@ -14,6 +14,9 @@
     display: block;
     padding-right: 3rem;
   }
+  @include media(">=1200px") {
+    border-bottom: 2rem dotted $red;
+  }
 }
 
 #stats .break-quote {

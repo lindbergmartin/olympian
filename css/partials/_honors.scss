@@ -2,7 +2,7 @@
   @include media(">=720px") {
     grid-template-columns: 1fr 1fr;
   }
-  @include media(">=1280px") {
+  @include media(">=1200px") {
     grid-template-columns: 1fr;
   }
 }
@@ -20,8 +20,12 @@
     padding-left: 3rem;
   }
 
-  @include media(">=1280px") {
-    // fix this shit
+  @include media(">=1200px") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    width: 80vw;
+    grid-gap: .5rem;
   }
 }
 
@@ -30,16 +34,27 @@
     height: 100%;
   }
 
-  @include media(">=1280px") {
+  @include media(">=1200px") {
     text-align: left;
     width: 100%;
     height: auto;
+    order: 2;
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
 
   & blockquote {
-    @include media(">=1280px") {
-      width: 50%;
-      // fix left margin/padding
+    @include media(">=1200px") {
+      width: 60%;
+    }
+  }
+
+  & .open-quote {
+    @include media(">=1200px") {
+      margin-left: -1.2rem;
+    }
+    @include media(">=1500px") {
+      margin-left: -1.8rem;
     }
   }
 }
@@ -58,6 +73,11 @@
     right: 0;
     left: -1rem;
   }
+
+  @include media(">=1200px") {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
 }
 
 #honors h2 {
@@ -68,6 +88,10 @@
   margin-bottom: .15rem;
   width: 100%;
   margin-bottom: 1rem;
+
+  @include media(">=1200px") {
+    grid-column: 1 / -1;
+  }
 }
 
 .honors-card h3 {
@@ -128,5 +152,38 @@
   @include media(">=720px") {
     border-right: none;
     border-left: 4px solid $grey;
+  }
+}
+
+#honors img {
+  display: none;
+}
+
+@include media(">=1200px") {
+  #honors img {
+    width: 100px;
+    display: initial;
+    align-self: start;
+    margin-top: 1rem;
+    margin-bottom: -.5rem;
+  }
+
+  #honors img:nth-of-type(1) {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  #honors img:nth-of-type(2) {
+    width: 100px;
+  }
+
+  #honors img:nth-of-type(3) {
+    width: 110px;
+    margin-top: .6rem;
+  }
+
+  #honors img:nth-of-type(4)  {
+    margin-top: 0;
+    width: 90px;
   }
 }
