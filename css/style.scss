@@ -1,19 +1,17 @@
 // Variables and Global
 @import "partials/reset";
-@import "partials/variables";
 @import "partials/include-media";
-@import "partials/global";
+@import "partials/variables";
 @import "partials/utilities";
+@import "partials/global";
 
 // Partials
 @import "partials/nav";
-@import "partials/hero-grid";
+@import "partials/hero";
 @import "partials/bio";
 @import "partials/goal";
+@import "partials/break-quote";
 @import "partials/stats";
 @import "partials/honors";
 @import "partials/shop";
 @import "partials/footer";
-
-// Extras
-@import "partials/rellax";

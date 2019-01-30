@@ -1,18 +1,63 @@
 #honors {
-  flex-direction: column;
-  padding-left: 4rem;
+  @include media(">=720px") {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media(">=1280px") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.honors-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 2rem;
   text-align: right;
-  @include media(">500px") {
-    padding: 6rem 2rem;
+
+  @include media(">=720px") {
+    width: 100%;
+    order: 2;
+    text-align: left;
+    padding-left: 3rem;
+  }
+
+  @include media(">=1280px") {
+    // fix this shit
+  }
+}
+
+#honors .break-quote {
+  @include media(">=720px") {
+    height: 100%;
+  }
+
+  @include media(">=1280px") {
+    text-align: left;
+    width: 100%;
+    height: auto;
+  }
+
+  & blockquote {
+    @include media(">=1280px") {
+      width: 50%;
+      // fix left margin/padding
+    }
   }
 }
 
 .honors-card {
   margin: 2rem 0;
   padding-right: 1rem;
+  padding-left: 1rem;
   position: relative;
   right: -1rem;
   width: 100%;
+
+  @include media(">=720px") {
+    padding: 0;
+    padding-left: 1rem;
+    right: 0;
+    left: -1rem;
+  }
 }
 
 #honors h2 {
@@ -21,7 +66,6 @@
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: .15rem;
-  text-align: right;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -57,16 +101,32 @@
 
 #honors_individual {
   border-right: 4px solid $yellow;
+  @include media(">=720px") {
+    border-right: none;
+    border-left: 4px solid $yellow;
+  }
 }
 
 #honors_national-team {
   border-right: 4px solid $blue;
+  @include media(">=720px") {
+    border-right: none;
+    border-left: 4px solid $blue;
+  }
 }
 
 #honors_japanese-club {
   border-right: 4px solid $red;
+  @include media(">=720px") {
+    border-right: none;
+    border-left: 4px solid $red;
+  }
 }
 
 #honors_club-team {
   border-right: 4px solid $grey;
+  @include media(">=720px") {
+    border-right: none;
+    border-left: 4px solid $grey;
+  }
 }

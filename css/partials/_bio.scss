@@ -2,12 +2,12 @@
   padding-top: 0;
   padding-bottom: 0;
 
-  @include media(">500px") {
+  @include media(">=720px") {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-  @include media(">1000px") {
+  @include media(">=1280px") {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
@@ -16,72 +16,67 @@
 .bio-card, .bio-quote {
   width: 100vw;
   min-height: 50vh;
-  padding: 6rem 0;
+  padding: 4rem 2rem;
 
-  margin: 0;
-  margin-left: -2rem;
-
-  @include media(">500px") {
-    margin-left: 0;
+  @include media(">=720px") {
     width: 100%;
     height: 100vh;
   }
 }
 
+// bio card
 .bio-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-left: 4rem;
-  padding-right: 2rem;
-  @include media(">500px") {
-    padding-right: 4rem;
-  }
+  padding-right: 4rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: $grey-lightest;
 }
 
 .bio-card h3 {
   @extend .font-display;
   font-size: 1.5rem;
   font-weight: 900;
-  // text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: left;
   width: 100%;
 }
 
+#tenacity h3 {
+  margin-left: -.5rem;
+}
+
+#experience h3 {
+  margin-left: -.1rem;
+}
+
+// bio quote
 .bio-quote {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-
-
-  padding: 4rem 2rem;
-
   @extend .font-display;
   font-weight: 700;
   text-align: right;
 
-  @include media(">500px") {
-    padding-right: 4rem;
-  }
-}
+  display: grid;
+  align-items: center;
+  justify-items: center;
 
-#creative {
-  order: 2;
-  @include media(">1000px") {
-    order: initial;
+  @include media(">400px") {
+    padding-right: 4rem;
   }
 }
 
 .bio-quote blockquote {
   font-size: 2rem;
-  margin-bottom: 1rem;
   line-height: 1.05;
   letter-spacing: -1px;
 
   grid-column: 1 / 1;
   grid-row: 1 / 1;
+
+  padding-right: .65rem;
 }
 
 .bio-quote-image {
@@ -102,36 +97,34 @@
   color: $yellow;
 }
 
-.bio-quote.no-attr blockquote {
-  margin-bottom: 0;
-}
-
-.bio-quote .attr {
-  text-transform: uppercase;
-  display: block;
-  mix-blend-mode: overlay;
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: .5rem;
-}
-
-.bio-quote .attr-description {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: white;
-  opacity: .5;
-  @extend .font-condensed;
-  font-weight: 400;
-}
-
 .stroked-yellow, .stroked-blue, .stroked-red {
   color: transparent;
   z-index: 10;
 }
 
+.stroked-blue {
+  -webkit-text-stroke: 1px $blue;
+}
+.stroked-yellow {
+  -webkit-text-stroke: 1px $yellow;
+  mix-blend-mode: hard-light;
+}
+.stroked-red {
+  -webkit-text-stroke: 1px $red;
+  mix-blend-mode: screen;
+}
+
+#creative {
+  @include media(">=720px") {
+    order: 2;
+  }
+  @include media(">=1280px") {
+    order: initial;
+  }
+}
+
 .mask-determined {
-  mask: url("../img/determined.png");
+  mask: url("../img/determined2.png");
   mask-type: alpha;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -139,25 +132,9 @@
 }
 
 .mask-creative {
-  mask: url("../img/creative.png");
+  mask: url("../img/creative3.png");
   mask-type: alpha;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: cover;
 }
-
-.stroked-blue {
-  -webkit-text-stroke: 1px $blue;
-  // mix-blend-mode: color-dodge;
-}
-.stroked-yellow {
-  -webkit-text-stroke: 1px $yellow;
-  mix-blend-mode: hard-light;
-  // color: $yellow;
-}
-.stroked-red {
-  -webkit-text-stroke: 1px $red;
-  mix-blend-mode: screen;
-}
-
-

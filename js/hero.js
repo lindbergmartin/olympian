@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+  // give body class of clip, this gets removed after animation.
+
+  $('body').addClass('clip');
+
   // wrap each letter in a span
   $('.name').each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
