@@ -683,6 +683,13 @@ nav .middle {
   width: auto;
 }
 
+@media (min-width: 1200px) {
+  #last {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
+
 @media (min-width: 720px) {
   #stats {
     -ms-grid-columns: 1fr 1fr;

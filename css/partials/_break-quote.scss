@@ -76,3 +76,10 @@
   height: 1.4rem;
   width: auto;
 }
+
+#last {
+  @include media(">=1200px") {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
